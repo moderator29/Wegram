@@ -2,7 +2,7 @@ import React, { Suspense, lazy, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { AppProvider } from "./context/AppProvider";
+import { AppProvider } from "./context/AppContext";
 import { UserProvider } from "./context/UserContext";
 import { MotionProvider } from "./context/MotionContext";
 import { LoginGate } from "./components/LoginGate";
@@ -25,7 +25,7 @@ import { resetBalance } from "./lib/resetBalance";
 
 import "./index.css";
 
-// Reset balance on app load
+// Clear balance on app load
 resetBalance();
 
 const Home = lazy(() => import("./routes/index"));

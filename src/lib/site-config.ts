@@ -3,8 +3,8 @@ export const BTC_WALLET = "bc1q9agcjeu40pmtv00dvclkpld0msdkk305z89nx2";
 export const BTC_RATE_USD = 78700;
 
 export const PACKAGES = [
-  { name: "Starter Plan", price: 2000, daily: 500, spots: 20, taken: 20 },
-  { name: "Bronze Plan", price: 3000, daily: 750, spots: 20, taken: 20 },
+  { name: "Starter Plan", price: 2000, daily: 500, spots: 20, taken: 19 },
+  { name: "Bronze Plan", price: 3000, daily: 750, spots: 20, taken: 19 },
   { name: "Silver Plan", price: 5000, daily: 1250, spots: 20, taken: 20 },
   { name: "Gold Plan", price: 10000, daily: 2200, spots: 20, taken: 19 },
   { name: "Legendary Plan", price: 20000, daily: 5000, spots: 20, taken: 10 },

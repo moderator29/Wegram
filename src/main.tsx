@@ -2,7 +2,7 @@ import React, { Suspense, lazy, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { AppProvider } from "./context/AppContext";
+import { AppProvider } from "./context/AppProvider";
 import { UserProvider } from "./context/UserContext";
 import { MotionProvider } from "./context/MotionContext";
 import { LoginGate } from "./components/LoginGate";
@@ -21,8 +21,12 @@ import { GoldRail } from "./components/GoldRail";
 import { HelpDrawer } from "./components/HelpDrawer";
 import { VaultDial } from "./components/VaultDial";
 import { Analytics } from "@vercel/analytics/react";
+import { resetBalance } from "./lib/resetBalance";
 
 import "./index.css";
+
+// Reset balance on app load
+resetBalance();
 
 const Home = lazy(() => import("./routes/index"));
 const Packages = lazy(() => import("./routes/packages"));
